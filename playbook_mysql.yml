@@ -1,0 +1,7 @@
+- name: Install database
+  hosts: database
+  remote_user: vagrant
+  roles:
+    - role: mysql
+      mysql_root_password: "mysql_passwd"
+      become: yes
